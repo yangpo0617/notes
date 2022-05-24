@@ -1,0 +1,13 @@
+PHP镜像Dockerfile需要安装composer， 在运行以下代码的时候
+```
+RUN composer self-update && \
+    composer diagnose
+```
+会遇到如下问题
+#19 1.007 Checking github.com rate limit: A connection timeout was encountered. If you intend to run Composer without connecting to the internet, run the command again prefixed with COMPOSER_DISABLE_NETWORK=1 to make Composer run in offline mode.
+#19 13.16 FAIL
+#19 13.16 [Composer\Downloader\TransportException] curl error 28 while downloading https://api.github.com/rate_limit: Resolving timed out after 10000 milliseconds
+
+查看后发现两个地方会导致以上问题： 
+1. Windows 防火墙
+2. DNS setting (手动设置IPV4， 8.8.8.8， 8.8.4.4)
