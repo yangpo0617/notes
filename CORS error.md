@@ -8,8 +8,4 @@
 #### 为什么gw-tripeze需要CorsMiddleware设置access-control-allow-origin: * ? 
 
 访问CDN的时候也需要解决CORS问题， 例如从admin.tourika.com访问Digital Ocean上的CDN资源, 需要在Digital Ocean提前设置
-![image ](https://github.com/yangpo0617/notes/assets/6838219/2d116284-da63-4d76-a0dc-cd718a04766a)
-
-
-
-
+<img src="https://github.com/yangpo0617/notes/assets/6838219/2d116284-da63-4d76-a0dc-cd718a04766a" alt="drawing" width="400"/>
