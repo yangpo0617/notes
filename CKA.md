@@ -1,3 +1,6 @@
+### 创建pod
+kubectl run POD_NAME --image=
+
 ### 暴露deployment， 创建service
 kubectl expose deployment NAME --port 80
 
