@@ -9,6 +9,9 @@ helm install minio-operator minio/operator --namespace=minio
 
 ### 看pod yaml 的ownerReference可以看到是通过谁创建的（deployment， statefulset， etc）， 如果没有就是手动创建的
 
+### scale statefulset
+kubectl scale statefulset XXX --replicas=N
+
 
 ### 流程图
 客户端浏览器 / curl
