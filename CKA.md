@@ -4,6 +4,11 @@ kubectl run POD_NAME --image=
 ### 暴露deployment， 创建service
 kubectl expose deployment NAME --port 80
 
+### Install Helm chart minio/operator into the new Namespace. The Helm Release should be called minio-operator
+helm install minio-operator minio/operator --namespace=minio
+
+### 看pod yaml 的ownerReference可以看到是通过谁创建的（deployment， statefulset， etc）， 如果没有就是手动创建的
+
 
 ### 流程图
 客户端浏览器 / curl
