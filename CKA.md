@@ -12,6 +12,8 @@ helm install minio-operator minio/operator --namespace=minio
 ### scale statefulset
 kubectl scale statefulset XXX --replicas=N
 
+### 服务质量类（Quality of Service class，QoS class）. Kubernetes 在 Node 资源不足时使用 QoS 类来就驱逐 Pod 作出决定
+
 
 ### 流程图
 客户端浏览器 / curl
