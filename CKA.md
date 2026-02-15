@@ -31,10 +31,15 @@ selector:
       labels:
         app: nginx
 
+## stateful 和 deployment 区别
+Deployment 适合无状态应用
+StatefulSet 适合有状态应用（需要固定身份和存储）
 
-
-
-
+Deployment 创建的pod名字是随机的，而statefulSet创建的是固定的
+Deployment 所有 Pod：可以共享同一个 PVC，或完全不使用存储，不会自动创建 PVC
+StatefulSet 每个 Pod：自动生成独立 PVC，不共享存储，PVC 不会随 Pod 删除
+Deployment 适合：Nginx Web API 微服务 后端应用 无状态 worker
+StatefulSet 适合：MySQL PostgreSQL Redis Apache Kafka
 
 ### 创建pod
 kubectl run POD_NAME --image=
