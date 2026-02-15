@@ -1,3 +1,41 @@
+## contexts
+### choose to use specific config file
+kubectl --kubeconfig CONFIG_FILE config get-contexts
+
+### List only contexts name
+kubectl --kubeconfig CONFIG_FILE config get-contexts -oname
+
+### switch context
+kubectl config use-context CONTEXT_NAME
+
+### switch namespace
+kubectl config set-context --current --namespace=NAMESPACE
+
+### view config
+kubectl config view [-o yaml/json] [--raw]
+
+## Base64
+### encoded
+echo "STRING" | base64
+### decoded 
+echo "STRING" | base64 -d
+
+## selector & template
+selector 找到符合这些 label 的 Pod，并把它们当成自己创建和管理的 Pod
+template 是 Pod 模板 意思是：“我要创建的 Pod 长什么样？” 包括：labels, container, image, port, volumeMount, 等等
+selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+
+
+
+
+
+
 ### 创建pod
 kubectl run POD_NAME --image=
 
