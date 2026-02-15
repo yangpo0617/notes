@@ -41,6 +41,10 @@ StatefulSet 每个 Pod：自动生成独立 PVC，不共享存储，PVC 不会�
 Deployment 适合：Nginx Web API 微服务 后端应用 无状态 worker
 StatefulSet 适合：MySQL PostgreSQL Redis Apache Kafka
 
+## statufulSet
+Scaling a StatefulSet 
+kubectl scale sts NAME --replicas=N
+
 ### 创建pod
 kubectl run POD_NAME --image=
 
