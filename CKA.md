@@ -45,6 +45,12 @@ StatefulSet 适合：MySQL PostgreSQL Redis Apache Kafka
 Scaling a StatefulSet 
 kubectl scale sts NAME --replicas=N
 
+## grep 使用技巧
+匹配“任意一个关键字”（OR 关系） 
+grep -E "Requests|Limits"， 例如 kubectl describe pod xxx | grep -E "Requests|Limits"
+或者使用多个-e， 例如grep -e Requests -e Limits
+
+
 ### 创建pod
 kubectl run POD_NAME --image=
 
